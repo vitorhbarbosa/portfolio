@@ -9,56 +9,257 @@
   }
 
 
-  * {
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+  }
 
-}
+html, body {
 
-body, html {
-    font-family: 'Merriweather Sans', sans-serif;
-    background: var(--body-bg-color);
+background-color: var(--body-bg-color);
 }
 
 .container {
-    width: 100vw;
-    height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 90vh 10vh;
+  gap: 20px 70px;
+  grid-auto-rows: minmax(50px, auto);
 
-    display: flex;
+}
+
+main {
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  background-color: var(--body-bg-color);
+  gap: 20px 10px;
+  /* height: 93vh; */
+
+  grid-auto-rows: minmax(50px, auto);
+
+
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 40vh 10vh 40vh;
+    gap: 20px 10px;
+    grid-auto-rows: minmax(50px, auto);
+
+ 
+
+}
+
+.project {
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+
+  border-radius: 20px;
+  background-color: var(--bg-cards);
+  
+  /* height: 86px; */
+}
+
+.project-d {
+  display:flex;
+  box-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
+.view {
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-radius: 20px;
+  background-color: var(--bg-cards);
+  /* height: 186px; */
+}
+
+
+
+.bottom-box {
+  display: flex;
+  box-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 170px;
+}
+
+
+  
+.icon {
+  max-width: 10%;
+  max-height: 10%;
+}
+
+.aview {
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  border-radius: 20px;
+  background-color: var(--bg-cards);
+  /* height: 186px; */
+}
+
+.posts {
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  border-radius: 20px;
+  background-color: var(--bg-cards);
+  /* height: 86px ; */
+}
+
+.errors {
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  grid-row-start: 4;
+  grid-row-end: 5;
+  border-radius: 20px;
+  background-color: var(--bg-cards);
+  /* height: 201px; */
+}
+
+aside {
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  background-color: var(--body-bg-color);
+  gap: 20px 10px;
+  /* height: 93vh; */
+  
+
+}
+
+.life-container {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 25vh 10vh 25vh;
+    gap: 20px 10px;
+
+
+
+}
+
+.profile {
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+background-color: var(--bg-cards);
+border-radius: 20px;
+
+
+}
+
+
+ .profile-img {
+  max-width: 20%;
+  max-height: 20%;
+  border-radius: 100%;
+  
+  
+  
+} 
+
+.profile > img {
+
   
 }
 
-.container .side-container {
-    justify-items: left;
+.errors > img {
+  max-width: 20%;
+  max-height: 20%;
+  border-radius: 100%;
+  
 }
 
-.side-container .profile {
-    width: 348;
-    height: 292;
-    background: var(--bg-cards);
-    border: var(--bg-cards);
-    border-radius: 20%;
+.profile-container > img {
+
+    max-width: 20%;
+    max-height: 20%;
+    border-radius: 100%;
+    
+  
 }
 
-.side-container .profile-img {
-    width: 128px;
-    height: 128px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    border: 1px solid var(--neon-green);
-    border-radius: 50%;
+.links {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-radius: 20px;
+  background-color: var(--bg-cards);
 }
 
-.side-container .profile-img img {
-    width: 125px;
-    height: 125px;
+.tech {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border-radius: 20px;
+  background-color: var(--bg-cards);
+}
 
-    border-radius: 50%;
+.experience {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  border-radius: 20px;
+  background-color: var(--bg-cards);
+}
+
+.education {
+  grid-row-start: 5;
+  grid-row-end: 6;
+  
+  border-radius: 20px;
+  background-color: var(--bg-cards);
+
+}
+
+footer {
+
+  background-color: green;
+ 
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 
